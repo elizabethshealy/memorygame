@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.top-header {
+  padding: 2em;
+	height: 6em;
+	display: block;
+	max-width: 10em;
+	margin: auto;
+  background-color: #3f51b5;
+	overflow: auto;
+}
+.headericon {
+	font-family: untitled-font-1;
+	font-size: 2em;
+}
+h1 {
+  font-family: orbitron, sans-serif;
+  font-size: 2em;
+  color: white;
+	align: center;
+}
+body {
+	background-color: #3f51b5;
+}
+.game-container {
+	padding-top: 2.25em;
+	padding-left: 2.25em;
+}
+.card-container {
+	display: inline-block;
+	width: 11em;
+	height: 11em;
+	position: relative;
+	background-color: #7986CB;
+	margin: .15em;
+	border-radius: 15px;
+}
+.card-container input {
+	opacity: 0;
+}
+.game-card {
+	position: absolute;
+	display: block;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	opacity: 0;
+	z-index: 0;
+	background-color: grey;
+	margin: .15px;
+	border-radius: 15px;
+}
+.icon {
+	position: absolute;
+	display: block;
+	padding: 30%;
+	font-size: 100%;
+	color: white;
+	font-family: untitled-font-1;
+	font-size: 4em;
+	z-index: -1;
+	border-radius: 15px;
+}
+
+input:checked + .game-card {
+	opacity: 1;
+}
+.animate {
+	animation: flipInX;
+}
