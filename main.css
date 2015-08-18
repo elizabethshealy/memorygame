@@ -1,42 +1,58 @@
 
 .top-header {
-  padding: 2em;
+  	padding: 2em;
 	height: 6em;
 	display: block;
 	max-width: 10em;
 	margin: auto;
-  background-color: #3f51b5;
+  	background-color: #3f51b5;
 	overflow: auto;
 }
+
 .headericon {
 	font-family: untitled-font-1;
 	font-size: 2em;
 }
+
 h1 {
   font-family: orbitron, sans-serif;
   font-size: 2em;
   color: white;
 	align: center;
 }
+
 body {
 	background-color: #3f51b5;
 }
+
 .game-container {
 	padding-top: 2.25em;
 	padding-left: 2.25em;
 }
+
 .card-container {
 	display: inline-block;
 	width: 11em;
 	height: 11em;
 	position: relative;
-	background-color: #7986CB;
+	background-color: gray;
+	opacity: .99;
 	margin: .15em;
 	border-radius: 15px;
+	z-index: 1;
 }
-.card-container input {
-	opacity: 0;
+
+.front {
+	position: absolute;
+	z-index: 1;
 }
+
+
+.back {
+	position: absolute;
+	z-index:-1;
+}
+
 .game-card {
 	position: absolute;
 	display: block;
@@ -44,12 +60,13 @@ body {
 	right: 1px;
 	bottom: 1px;
 	left: 1px;
-	opacity: 0;
-	z-index: 0;
-	background-color: grey;
+	z-index: -1;
+	opacity: 1;
+	background-color: gray;
 	margin: .15px;
 	border-radius: 15px;
 }
+
 #icon {
 	position: absolute;
 	display: block;
@@ -58,13 +75,17 @@ body {
 	color: white;
 	font-family: untitled-font-1;
 	font-size: 1em;
+	opacity: .99;
 	z-index: -1;
 	border-radius: 15px;
+	display: none;
 }
 
-input:checked + .game-card {
+/*input:checked + .game-card {
 	opacity: 1;
 }
+
 .animate {
 	animation: flipInX;
-}
+}*/
+

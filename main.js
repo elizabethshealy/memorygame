@@ -15,6 +15,8 @@
 // shuffle(array);
 
 
+$(".card-container").justFlipIt({Click: true});
+
 var array = ["a","a", "b", "b", "c", "c", "d", "d", "e", "e", "f", "f", "g", "g", "h", "h", "i", "i"];
 var newArray = [];
 
@@ -23,29 +25,73 @@ function shuffle(o){
     return o;
 }
 
-// shuffle(array);
+shuffle(array);
 
-$("#MyButton").click(shuffle(array));
+// $("#MyButton").click(shuffle(array));
 
-var foos = document.querySelectorAll("#icon");
+//Assigns the array to each card
+var foos = document.querySelectorAll("#back");
 
 for (var i = 0; i < foos.length; ++i) {
     foos[i].textContent = array[i];
 }
 
-// .replace(/"game-card"/g, "Hello");
+console.log (array[1]);
 
-// $('#icon').replaceWith( "<p>Here's some new text</p>" );
-// $("<p>Here's some new text</p>").replaceAll('#game-card');
+//Assigns variables to each card selected
+// var cardone;
+// var cardtwo;
 
-// document.querySelectorAll(".class");
+// $('.card-container').click(function(){
+//     $(this).addClass('activeTab');
+//     alert ("hello");
+// });
 
-// function replaceContentInContainer(selector, content) {
-//   var list = document.querySelectorAll(selector);
-//   for (var i = 0, length = list.length; i < length; i++) {
-//      list[i].innerHTML = content;
-//   }
-// }
+var pick1;
+var pick2;
 
-// replaceContentInContainer(".game-card", array);
+$('#test-card').click(function() {
+
+    // set first card
+    if (pick1 === null) {
+        
+        pick1 = $(this).attr("id")
+        alert ('pick1');
+        console.log ('pick1');
+
+    }
+    // set second card
+    else if (pick2 === null) {
+
+        pick2 = $(this).val('#back');
+
+        // compare colors
+        if (pick1 === pick2) {
+            alert('MATCH!');
+        }
+        else alert('NO MATCH!');
+
+        // reset pick variables
+        pick1 = null;
+        pick2 = null;
+    }
+
+});
+
+
+
+
+
+// var card = document.getElementById("#test-card").value;
+
+
+// function select() {
+//     if (".card-container").value = "a" {
+//         alert "Hello";
+//     }
+    
+//    else {
+//    alert "No thanks";
+// };
+
 
